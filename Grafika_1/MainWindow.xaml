@@ -1,0 +1,63 @@
+﻿<Window x:Class="Grafika_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grafika_1"
+        mc:Ignorable="d"
+        Title="Prymitywy graficzne oraz kanwa- Aleksandra Niedźwiecka" Height="550" Width="800" FontSize="12">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Name="Grid0">
+            <Label Content="Choose Shape"  Margin="10,10,0,0" VerticalAlignment="Top" Height="29" Width="88"/>
+            <RadioButton Content="Line" Name="LineRadioButton" HorizontalAlignment="Left"  Margin="13,35,0,0" VerticalAlignment="Top"  FontSize="10" Height="15" Width="41" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Rectangle" Name="RectangleRadioButton" HorizontalAlignment="Left"  Margin="13,55,0,0" VerticalAlignment="Top" FontSize="10" Height="15" Width="64" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Circle" Name="CircleRadioButton" HorizontalAlignment="Left" Margin="13,75,0,0" VerticalAlignment="Top" FontSize="10" Height="15" Width="46" Checked="RadioButton_Checked"/>
+            <!-- Line- Length -->
+            <Label Content="Length:" Name="LengthLabel"  Margin="13,95,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <TextBox Name="LengthTextBox"  Margin="13,115,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <!-- Line Vector -->
+            <Label Content="Vector:" Name="VectorLabel" Margin="13,135,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <TextBox Name="VectorTextBox"  Margin="13,155,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <!-- Rectangle- Height -->
+            <Label Content="Height:" Name="HeightLabel" Margin="13,135,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <TextBox Name="HeightTextBox"  Margin="13,155,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <!-- Circle- Radius -->
+            <Label Content="Radius:" Name="RadiusLabel" Margin="13,95,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <TextBox Name="RadiusTextBox" Margin="13,115,0,0" VerticalAlignment="Top" Height="25" Width="143" Visibility="Collapsed"/>
+            <!-- Position X -->
+            <Label Content="Position on X-Axis :" Name="XLabel" Margin="13,175,0,0" VerticalAlignment="Top" Height="25" Width="110" />
+            <TextBox Name="XTextBox" Margin="13,195,0,0" VerticalAlignment="Top" Height="25" Width="143"/>
+            <!-- Position Y -->
+            <Label Content="Position on Y-Axis :" Name="YLabel" Margin="13,215,0,0" VerticalAlignment="Top" Height="25" Width="110" />
+            <TextBox Name="YTextBox"  Margin="13,235,0,0" VerticalAlignment="Top" Height="25" Width="143"/>
+
+            <!--Button Draw-->
+            <Button Content="Draw" HorizontalAlignment="Left" Margin="13,275,0,0" VerticalAlignment="Top" Width="143" Click="DrawButton_Click"/>
+            <!--Button Edit-->
+            <Button Content="Edit" HorizontalAlignment="Left" Margin="13,305,0,0" VerticalAlignment="Top" Width="69" Click="EditButton_Click"/>
+            <!--Button Clear-->
+            <Button Content="Clear" HorizontalAlignment="Left" Margin="87,305,0,0" VerticalAlignment="Top" Width="69" Click="ClearButton_Click"/>
+            <!--Button Upload-->
+            <Button Content="Upload" HorizontalAlignment="Left" Margin="13,335,0,0" VerticalAlignment="Top" Width="69" Click="UploadButton_Click"/>
+            <!--Button Download-->
+            <Button Content="Download" HorizontalAlignment="Left" Margin="87,335,0,0" VerticalAlignment="Top" Width="69" Click="DownloadButton_Click"/>
+            <!--Button Upload Many-->
+            <Button Content="Upload Many" HorizontalAlignment="Left" Margin="13,365,0,0" VerticalAlignment="Top" Width="143" Click="UploadManyButton_Click"/>
+            <!--Button Upload Many-->
+            <Button Content="Download Many" HorizontalAlignment="Left" Margin="13,395,0,0" VerticalAlignment="Top" Width="143" Click="DownloadManyButton_Click"/>
+        </Grid>
+        <Canvas  x:Name="MyCanvas" Grid.Column="1" Background="White"
+        MouseDown="MyCanvas_MouseRightButtonDown"
+        MouseMove="MyCanvas_MouseMove"
+        MouseUp="MyCanvas_MouseRightButtonUp">
+        </Canvas>
+
+
+
+    </Grid>
+    
+</Window>
